@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Learn Modern JavaScript methods by building football team cards
+    </title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 class="title">Team stats</h1>
+
+    <select id="team-select">
+      <option value="Tunisia">Tunisia</option>
+      <option value="Argentina">Argentina</option>
+      <option value="Portugal">Portugal</option>
+      <option value="Qatar">Qatar</option>
+      <option value="Spain">Spain</option>
+      <option value="Germany">Germany</option>
+      <option value="Costa Rica">Costa Rica</option>
+      <option value="Japan">Japan</option>
+      <option value="Brazil">Brazil</option>
+      <option value="Serbia">Serbia</option>
+      <option value="Uruguay">Uruguay</option>
+      <option value="Netherlands">Netherlands</option>
+      <option value="Croitia">Croitia</option>
+      <option value="Belguim">Belguim</option>
+      <option value="Canada">Canada</option>
+      <option value="Cameroon">Cameroun</option>
+      <option value="Denmark">Denmark</option>
+      <option value="Australia">Australia</option>
+      <option value="Marocco">Marocco</option>
+      <option value="South Korea">South Korea</option>
+      <option value="Senegal">Senegal</option>
+      <option value="England">England</option>
+      <option value="Wales">Wales</option>
+      <option value="Iran">Iran</option>
+      <option value="Ecuador">Ecuador</option>
+      <option value="Senegal">Senegal</option>
+      <option value="Swizerland">Swizerland</option>
+      <option value="United States">United States</option>
+      <option value="Turkey">Turkey</option>
+      <option value="Saudia Arabia">Saudi Arabia</option>
+      <option value="Poland">Poland</option>
+      <option value="Mexico">Mexico</option>
+      <option value="Venezuela">Venezuela</option>
+    </select>
+    <main>
+      <div class="team-stats">
+        <p>Team: <span id="team"></span></p>
+        <p>Sport: <span id="sport"></span></p>
+        <p>Year: <span id="year"></span></p>
+        <p>Head coach: <span id="head-coach"></span></p>
+      </div>
+      <label class="options-label" for="players">Filter Teammates:</label>
+      <select name="players" id="players">
+        <option value="all">All Players</option>
+        <option value="nickname">Nicknames</option>
+        <option value="forward">Position Forward</option>
+        <option value="midfielder">Position Midfielder</option>
+        <option value="defender">Position Defender</option>
+        <option value="goalkeeper">Position Goalkeeper</option>
+      </select>
+      <div class="cards" id="player-cards">
+        <div class="player-card">
+          <h2>Seifeddine Jaziri</h2>
+          <p>Position: forward</p>
+          <p>Number: 19</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <h2>Naim Sliti</h2>
+          <p>Position: midfielder</p>
+          <p>Number: 23</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <h2>Ferjani Sassi</h2>
+          <p>Position: midfielder</p>
+          <p>Number: 13</p>
+          <p>Nickname: El Ferr</p>
+        </div>
+        <div class="player-card">
+          <h2>Hannibal Mejbri</h2>
+          <p>Position: midfielder</p>
+          <p>Number: 8</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <h2>Dylan Bronn</h2>
+          <p>Position: defender</p>
+          <p>Number: 6</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <h2>Nader Ghndri</h2>
+          <p>Position: defender</p>
+          <p>Number: 5</p>
+          <p>Nickname: Nader</p>
+        </div>
+        <div class="player-card">
+          <h2>Youssef Msekni</h2>
+          <p>Position: forward</p>
+          <p>Number: 7</p>
+          <p>Nickname: El nemss</p>
+        </div>
+        <div class="player-card">
+          <h2>Yassine Meriah</h2>
+          <p>Position: defender</p>
+          <p>Number: 4</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <h2>Montassar Talbi</h2>
+          <p>Position: defender</p>
+          <p>Number:3</p>
+          <p>Nickname: Monta</p>
+        </div>
+        <div class="player-card">
+          <h2>Aissa Laidouni</h2>
+          <p>Position: midfielder</p>
+          <p>Number: 14</p>
+          <p>Nickname: El chikh</p>
+        </div>
+        <div class="player-card">
+          <h2>Wahbi Khazri</h2>
+          <p>Position: forward</p>
+          <p>Number: 10</p>
+          <p>Nickname: El capi</p>
+        </div>
+        <div class="player-card">
+          <h2>Mohamed Ali Ben Romdhane</h2>
+          <p>Position: midfielder</p>
+          <p>Number: 15</p>
+          <p>Nickname: Dali</p>
+        </div>
+        <div class="player-card">
+          <h2>Ali Abdi</h2>
+          <p>Position: defender</p>
+          <p>Number: 24</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <h2>Anis Ben Slimane</h2>
+          <p>Position: midfielder</p>
+          <p>Number: 25</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <h2>Bechir Ben Said</h2>
+          <p>Position: goalkeeper</p>
+          <p>Number: 22</p>
+          <p>Nickname: saha bechir</p>
+        </div>
+        <div class="player-card">
+          <h2>Bilel Ifa</h2>
+          <p>Position: defender</p>
+          <p>Number: 2</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <h2>Taha Yassine Khenissi</h2>
+          <p>Position: forward</p>
+          <p>Number: 11</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <h2>Mouez Hassen</h2>
+          <p>Position: goalkeeper</p>
+          <p>Number: 26</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <h2>Mohamed Drager</h2>
+          <p>Position: defender</p>
+          <p>Number: 20</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <h2>Carlos Tapia</h2>
+          <p>Position: midfielder</p>
+          <p>Number: 20</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <h2>Elyes Skhiri</h2>
+          <p>Position: midfielder</p>
+          <p>Number: 17</p>
+          <p>Nickname: N/A</p>
+        </div>
+        <div class="player-card">
+          <h2>Wajdi Kechrida</h2>
+          <p>Position: defender</p>
+          <p>Number: 21</p>
+          <p>Nickname: wajdi</p>
+        </div>
+        <div class="player-card">
+          <h2>Ali Maaloul</h2>
+          <p>Position: defender</p>
+          <p>Number: 12</p>
+          <p>Nickname: N/A</p>
+        </div>
+      </div>
+    </main>
+    <footer>&copy; freeCodeCamp</footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
