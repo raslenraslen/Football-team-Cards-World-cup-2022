@@ -223,3 +223,65 @@ playersDropdownList.addEventListener("change", (e) => {
       break;
   }
 });
+
+const showPlayerStatsButton = document.getElementById("showPlayerStatsButton");
+
+// Function to calculate and display player stats
+function showPlayerStats() {
+  // Calculate player stats here (e.g., goals scored, passes, etc.)
+  // For demonstration, let's alert a message
+  alert(
+    "Player stats: Goals scored:  1, Goals conceded : 1, Goal Scorer: Wahbi khazri"
+  );
+}
+
+// Add event listener to the button
+showPlayerStatsButton.addEventListener("click", showPlayerStats);
+
+const worldCupGamesButton = document.getElementById("showWorldCupGamesButton");
+const worldCupGamesDiv = document.getElementById("worldCupGames");
+const backToMainPageButton = document.getElementById("backToMainPageButton");
+
+// Data containing World Cup games and results
+const worldCupGames = [
+  { opponent: "Denmark", result: "0/0" },
+  { opponent: "Australia", result: "1/0 (Australia)" },
+  { opponent: "France", result: "1/0 (Tunisia)" },
+];
+
+// Function to display World Cup games
+function showWorldCupGames() {
+  // Hide all other elements
+  document.body.innerHTML = "";
+
+  // Create a div to display World Cup games
+  const container = document.createElement("div");
+  container.id = "worldCupGamesContainer";
+  container.style.padding = "20px";
+  container.style.color = "#fff";
+
+  // Display each game and result
+  worldCupGames.forEach((game) => {
+    const gameDiv = document.createElement("div");
+    gameDiv.textContent = `Played against ${game.opponent} - Result: ${game.result}`;
+    container.appendChild(gameDiv);
+  });
+
+  // Append the container to the body
+  document.body.appendChild(container);
+
+  // Show "Back to Main Page" button
+  backToMainPageButton.style.display = "block";
+}
+
+// Function to go back to the main page
+function backToMainPage() {
+  // Reload the page
+  location.reload();
+}
+
+// Add event listener to the "Show World Cup Games" button
+worldCupGamesButton.addEventListener("click", showWorldCupGames);
+
+// Add event listener to the "Back to Main Page" button
+backToMainPageButton.addEventListener("click", backToMainPage);
